@@ -17,7 +17,7 @@ When helping clients, always be ready to provide strategic advice on:
 Always keep your tone mature, helpful, concise, and focused on delivering real results for the client."""
 
 model = genai.GenerativeModel(
-    model_name="models/gemini-3.5-flash",
+    model_name="models/gemini-2.0-flash",
     system_instruction=system_prompt
 )
 
