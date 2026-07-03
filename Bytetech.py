@@ -34,6 +34,9 @@ if prompt := st.chat_input("How can I help you today?"):
     with st.chat_message("user"):
         st.markdown(prompt)
 
-    with st.chat_message("assistant"):
+with st.chat_message("assistant"):
+    try:
         response = st.session_state.chat_session.send_message(prompt)
         st.markdown(response.text)
+    except Exception:
+        st.warning("The AI model's usage limit has been reached. Please wait for a while for the limit to reset, and try again in a few minutes.")
